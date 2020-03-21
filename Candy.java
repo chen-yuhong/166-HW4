@@ -29,7 +29,7 @@ public class Candy extends DessertItem{
 	public String getListPrice(){
 	    String s = this.weight + " lbs. @ " + DessertShoppe.cents2dollarsAndCents(this.costPer) + " /lb."; 
 	    return s;
-	  }
+	}
 
 }
 
