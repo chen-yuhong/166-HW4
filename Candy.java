@@ -1,8 +1,11 @@
+package homeworkfour;
 
 public class Candy extends DessertItem{
-	String name;
+	
+	
 	double weight;
 	int costPer;
+	
 	
 	public static void main(String[] args) {
 		
@@ -20,8 +23,13 @@ public class Candy extends DessertItem{
 	
 	public int getCost() {
 		int cost;
-		cost = (int)Math.round(this.weight * this.costPer * 100);
+		cost = (int)Math.round(this.weight * this.costPer);
 		return cost;
 	}
+	public String getListPrice(){
+	    String s = this.weight + " lbs. @ " + DessertShoppe.cents2dollarsAndCents(this.costPer) + " /lb."; 
+	    return s;
+	  }
 
 }
+
