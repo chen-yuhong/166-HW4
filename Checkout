@@ -1,0 +1,40 @@
+package homeworkfour;
+
+import java.util.ArrayList;
+public class Checkout {
+	
+	ArrayList<DessertItem> item; 
+	int cost = 0;
+	
+	public Checkout() {
+		this.item = new ArrayList<DessertItem>();
+	  
+	}
+	public void clear( ) {
+		this.item.clear();
+	}
+	public void enterItem(DessertItem item) {
+		this.item.add(item);
+	}
+	public int numberOfItems() {
+		return item.size(); 
+	}
+	public java.lang.String toString(){
+		int finalWidth = DessertShoppe.MAX_ITEM_NAME_SIZE + DessertShoppe.COST_WIDTH; 
+		int nameLength = DessertShoppe.STORE_NAME.length();
+		int margin = (finalWidth - nameLength)/2;
+		String firstLine = 
+		
+	}
+	public int totalCost() {
+		for (int i =0; i<item.size();i++) {
+			cost = cost + item.get(i).getCost();
+		}
+		return cost;
+	}
+	public int totalTax() {
+		double totalTax = totalCost() * DessertShoppe.TAX_RATE * 0.01;
+		int finalTax = (int) Math.round(totalTax);
+		return finalTax; 
+	}
+}
